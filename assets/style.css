@@ -351,15 +351,60 @@ section{padding:110px 0;}
 /* HOW WE WORK */
 .process-grid{
   display:grid; grid-template-columns:repeat(3,1fr);
-  border-top:1px solid var(--line); border-left:1px solid var(--line);
+  border-top:1px solid var(--line);
+  border-bottom:1px solid var(--line);
 }
 .process-card{
-  border-right:1px solid var(--line); border-bottom:1px solid var(--line);
-  padding:32px; min-height:200px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  padding:32px 28px 40px;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+  min-height:210px;
 }
-.process-card .no{font-size:13px; color:var(--orange); font-weight:600; margin-bottom:14px; display:block;}
-.process-card h3{font-size:24px; color:var(--navy); margin-bottom:12px;}
-.process-card p{font-size:14px; opacity:0.75;}
+.process-card.wide{
+  grid-column:span 2;
+}
+.process-card:nth-child(3),
+.process-card:nth-child(5){
+  border-right:none;
+}
+.process-card:nth-child(4),
+.process-card:nth-child(5){
+  border-bottom:none;
+}
+.process-card-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:20px;
+}
+.process-card .no{
+  font-size:14px;
+  color:var(--orange);
+  font-weight:600;
+  margin-bottom:0;
+}
+.process-card .chevron{
+  color:#3b4e94;
+  width:18px;
+  height:18px;
+}
+.process-card h3{
+  font-size:clamp(26px, 3.2vw, 36px);
+  color:var(--navy);
+  font-weight:700;
+  margin-bottom:14px;
+}
+.process-card p{
+  font-size:14.5px;
+  color:var(--ink);
+  opacity:0.8;
+  max-width:320px;
+  margin:0;
+  line-height:1.5;
+}
 
 /* GALLERY */
 .gallery-grid{
@@ -481,7 +526,8 @@ footer{background:var(--navy-deep); color:var(--cream); padding:70px 0 26px;}
   }
   .execution .wrap{grid-template-columns:1fr;}
   .execution img{aspect-ratio:16/9;}
-  .process-grid{grid-template-columns:1fr;}
+  .process-grid{grid-template-columns:1fr; border-bottom:none;}
+  .process-card, .process-card.wide{grid-column:span 1; border-right:none; border-bottom:1px solid var(--line) !important;}
   .gallery-grid{grid-template-columns:repeat(2,1fr);}
   .gallery-grid img.tall{height:210px; grid-row:auto;}
   .footer-grid{grid-template-columns:1fr; gap:30px;}
