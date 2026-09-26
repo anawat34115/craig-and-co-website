@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Service — CRAIG & CO.</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -17,6 +18,7 @@
       </a>
       <div class="nav-links">
         <a href="index.html">Home</a>
+        <a href="who-we-are.html">Who We Are</a>
         <a href="service.html">Service</a>
         <a href="portfolio.html">Portfolio</a>
         <a class="nav-cta" href="contact.html">Let's connect ↗</a>
@@ -103,52 +105,67 @@
           <h2>Every capability behind the experience.</h2>
         </div>
       </div>
-      <div class="solutions-grid">
-        <div class="solution-card" style="aspect-ratio:3/3.4;">
-          <img src="assets/corporate-events.jpg" alt="Experience & event design">
-          <div class="overlay">
-            <h4>Experience & Event Design</h4>
-            <p>Event concept & design, event management, conferences, corporate activities, team building, corporate
-              gifts & merchandise.</p>
+      <div class="swiper serviceSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="solution-card" style="aspect-ratio:3/3.4;">
+              <img src="assets/corporate-events.jpg" alt="Experience & event design">
+              <div class="overlay">
+                <h4>Experience & Event Design</h4>
+                <p>Event concept & design, event management, conferences, corporate activities, team building, corporate gifts & merchandise.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="solution-card" style="aspect-ratio:3/3.4;">
+              <img src="assets/retreat.jpg" alt="Venue sourcing">
+              <div class="overlay">
+                <h4>Venue Sourcing</h4>
+                <p>Hotel sourcing, meeting & conference venues, site inspection, contract negotiation, venue coordination.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="solution-card" style="aspect-ratio:3/3.4;">
+              <img src="assets/brand-activation.jpg" alt="Transportation">
+              <div class="overlay">
+                <h4>Transportation</h4>
+                <p>Limousine service, private car, executive van, coach / bus, airport transfers.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="solution-card" style="aspect-ratio:3/3.4;">
+              <img src="assets/gallery-yacht.jpg" alt="Travel management">
+              <div class="overlay">
+                <h4>Travel Management</h4>
+                <p>Flight reservation, hotel reservation, customized travel itinerary, visa application service, travel insurance.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="solution-card" style="aspect-ratio:3/3.4;">
+              <img src="assets/gallery-video.jpg" alt="Hospitality and concierge service">
+              <div class="overlay">
+                <h4>Hospitality & Concierge Service</h4>
+                <p>Event photography, event videography, drone photography & videography, highlight video production.</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="solution-card" style="aspect-ratio:3/3.4;">
+              <img src="assets/execution.jpg" alt="Guest experience">
+              <div class="overlay">
+                <h4>Guest Experience</h4>
+                <p>On-the-ground hospitality that makes every guest feel considered, from arrival to send-off.</p>
+              </div>
+            </div>
           </div>
         </div>
-        <div class="solution-card" style="aspect-ratio:3/3.4;">
-          <img src="assets/retreat.jpg" alt="Venue sourcing">
-          <div class="overlay">
-            <h4>Venue Sourcing</h4>
-            <p>Hotel sourcing, meeting & conference venues, site inspection, contract negotiation, venue coordination.
-            </p>
-          </div>
-        </div>
-        <div class="solution-card" style="aspect-ratio:3/3.4;">
-          <img src="assets/brand-activation.jpg" alt="Transportation">
-          <div class="overlay">
-            <h4>Transportation</h4>
-            <p>Limousine service, private car, executive van, coach / bus, airport transfers.</p>
-          </div>
-        </div>
-        <div class="solution-card" style="aspect-ratio:3/3.4;">
-          <img src="assets/gallery-yacht.jpg" alt="Travel management">
-          <div class="overlay">
-            <h4>Travel Management</h4>
-            <p>Flight reservation, hotel reservation, customized travel itinerary, visa application service, travel
-              insurance.</p>
-          </div>
-        </div>
-        <div class="solution-card" style="aspect-ratio:3/3.4;">
-          <img src="assets/gallery-video.jpg" alt="Hospitality and concierge service">
-          <div class="overlay">
-            <h4>Hospitality & Concierge Service</h4>
-            <p>Event photography, event videography, drone photography & videography, highlight video production.</p>
-          </div>
-        </div>
-        <div class="solution-card" style="aspect-ratio:3/3.4;">
-          <img src="assets/execution.jpg" alt="Guest experience">
-          <div class="overlay">
-            <h4>Guest Experience</h4>
-            <p>On-the-ground hospitality that makes every guest feel considered, from arrival to send-off.</p>
-          </div>
-        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
     </div>
   </section>
@@ -233,7 +250,7 @@
         </div>
         <div class="footer-col">
           <h5>COMPANY</h5>
-          <a href="index.html#who">About Us</a>
+          <a href="who-we-are.html">Who We Are</a>
           <a href="service.html">Our Services</a>
           <a href="portfolio.html">Portfolio</a>
           <a href="contact.html">Contact</a>
@@ -252,6 +269,36 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.serviceSwiper', {
+      slidesPerView: 1,
+      spaceBetween: 20,
+      loop: true,
+      autoplay: {
+        delay: 3500,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      breakpoints: {
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 22,
+        },
+        1024: {
+          slidesPerView: 3,
+          spaceBetween: 26,
+        },
+      },
+    });
+  </script>
 </body>
 
 </html>
