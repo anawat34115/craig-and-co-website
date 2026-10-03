@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Portfolio — CRAIG & CO.</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
@@ -19,7 +20,7 @@
         <a href="index.html">Home</a>
         <a href="who-we-are.html">Who We Are</a>
         <a href="service.html">Service</a>
-        <a href="portfolio.html">Portfolio</a>
+        <a href="portfolio.html" class="active">Portfolio</a>
         <a class="nav-cta" href="contact.html">Let's connect ↗</a>
       </div>
     </div>
@@ -29,8 +30,6 @@
     <div class="wrap">
       <div class="eyebrow" style="text-align:center; justify-content:center;">CO PORTFOLIO</div>
       <h1>See the feeling in the details.</h1>
-      <p style="max-width:560px; margin:20px auto 0; opacity:0.75; font-size:15px;">Moments, places, and people brought
-        together with intention. Explore our visual story through photos and video.</p>
     </div>
   </header>
 
@@ -70,7 +69,7 @@
     </div>
   </section>
 
-  <section>
+  <section class="testimonial-section">
     <div class="wrap">
       <div class="section-head">
         <div>
@@ -78,19 +77,25 @@
           <h2>What partners say after working with us.</h2>
         </div>
       </div>
-      <div style="display:grid; grid-template-columns:1fr 1fr; gap:24px;">
-        <div class="testimonial-card" style="max-width:none;">
-          <p>"Thank you for everything on Tuesday and for making it so special. Hopefully, we'll be able to work
-            together again in the future."</p>
-          <div class="name">Danni, Huda Beauty</div>
-          <div class="date">September 2025</div>
+      
+      <div class="swiper testimonialSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="testimonial-container">
+              <p class="testimonial-quote">"Thank you for everything on Tuesday and for making it so special. Hopefully, we'll be able to work together again in the future."</p>
+              <div class="testimonial-author">Danni, Huda Beauty</div>
+              <div class="testimonial-date">September 2025</div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="testimonial-container">
+              <p class="testimonial-quote">"Thank you, Alicia. It was a pleasure collaborating with you. The experience was exceptional, and we truly appreciate all the hard work that went into making it a success."</p>
+              <div class="testimonial-author">Big Ticket</div>
+              <div class="testimonial-date">F1 Yacht Experience, December 2025</div>
+            </div>
+          </div>
         </div>
-        <div class="testimonial-card" style="max-width:none;">
-          <p>"Thank you, Alicia. It was a pleasure collaborating with you. The experience was exceptional, and we truly
-            appreciate all the hard work that went into making it a success."</p>
-          <div class="name">Big Ticket</div>
-          <div class="date">F1 Yacht Experience, December 2025</div>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
   </section>
@@ -150,6 +155,20 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    new Swiper('.testimonialSwiper', {
+      loop: true,
+      autoplay: {
+        delay: 5000,
+        disableOnInteraction: false,
+      },
+      pagination: {
+        el: '.testimonialSwiper .swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
 </body>
 
 </html>
