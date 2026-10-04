@@ -20,7 +20,7 @@
         <a href="who-we-are.html">Who We Are</a>
         <a href="service.html">Service</a>
         <a href="portfolio.html">Portfolio</a>
-        <a class="nav-cta" href="contact.html">Let's connect ↗</a>
+        <a class="nav-cta active" href="contact.html">Let's connect ↗</a>
       </div>
     </div>
   </nav>
@@ -109,6 +109,44 @@
     </div>
   </section>
 
+  <!-- FAQ SECTION -->
+  <section style="background:#eee9db;">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="section-num">FAQ</div>
+          <h2>Good to know.</h2>
+        </div>
+      </div>
+      <div class="faq-list">
+        <div class="faq-item-wrap">
+          <div class="faq-item"><h4>What kind of experiences do you create?</h4><span class="plus">+</span></div>
+          <div class="faq-answer">Corporate events, conferences and brand activations; leadership retreats and team-building journeys; and full concierge support — venue sourcing, transportation, travel management and on-site photography/videography.</div>
+        </div>
+        <div class="faq-item-wrap">
+          <div class="faq-item"><h4>Where does CRAIG&CO operate?</h4><span class="plus">+</span></div>
+          <div class="faq-answer">We're based in Bangkok, Thailand, and deliver experiences across Thailand and beyond.</div>
+        </div>
+        <div class="faq-item-wrap">
+          <div class="faq-item"><h4>How early should we get in touch?</h4><span class="plus">+</span></div>
+          <div class="faq-answer">Reach out as soon as you have a date or idea in mind — our team responds within 24 hours with a tailored proposal, free of charge.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="wrap">
+      <h2>Ready to create something <span class="hi">memorable?</span></h2>
+      <p>Tell us about your event or retreat. Our team will respond within 24 hours with a tailored proposal — free of charge, no commitment required.</p>
+      <div class="cta-box">
+        <a class="btn-primary" href="contact.html">GET A FREE PROPOSAL</a>
+        <a class="btn-secondary" href="tel:+66956166995">📞 CALL US NOW</a>
+      </div>
+    </div>
+  </section>
+
   <div class="map-note">
     <div class="wrap">
       <p>Bangkok, Thailand · Serving Thailand & beyond</p>
@@ -149,6 +187,21 @@
       e.preventDefault();
       document.getElementById('formSuccess').style.display = 'block';
       this.reset();
+    });
+
+    document.querySelectorAll('.faq-item').forEach(item=>{
+      item.addEventListener('click',()=>{
+        const plus = item.querySelector('.plus');
+        const answer = item.parentElement.querySelector('.faq-answer');
+        const isOpen = plus.textContent === '–';
+        if(isOpen){
+          answer.style.display = 'none';
+          plus.textContent = '+';
+        } else {
+          answer.style.display = 'block';
+          plus.textContent = '–';
+        }
+      });
     });
   </script>
 </body>
