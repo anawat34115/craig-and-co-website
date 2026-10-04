@@ -267,6 +267,108 @@
     </div>
   </section>
 
+  <!-- 05 — CO CONCIERGE -->
+  <section class="co-concierge" id="concierge">
+    <div class="wrap">
+      <div class="concierge-header">
+        <div class="concierge-icon-wrap">
+          <img src="assets/Logo-06.png" alt="CO CONCIERGE." class="concierge-icon">
+        </div>
+        <div class="concierge-brand"><span class="brand-orange">CO</span> CONCIERGE.</div>
+        <p class="concierge-subheading">
+          High-touch support for every detail, from travel and transport to guest
+          <span class="brand-orange">care and the moments in between.</span>
+        </p>
+      </div>
+
+      <div class="concierge-grid">
+        <!-- 01: Travel Management -->
+        <div class="concierge-card card-tall">
+          <div class="concierge-img-wrap">
+            <img src="assets/concierge-travel.jpg" alt="Travel Management — Craig & Co">
+          </div>
+          <div class="concierge-overlay">
+            <h4 class="concierge-title"><span class="brand-orange">TRAVEL</span> MANAGEMENT.</h4>
+            <p class="concierge-desc">Tailored travel planning and flawless itinerary logistics for every attendee.</p>
+          </div>
+        </div>
+
+        <!-- 02: Venue & Transportation -->
+        <div class="concierge-card card-offset">
+          <div class="concierge-img-wrap">
+            <img src="assets/concierge-venue.jpg" alt="Venue & Transportation — Craig & Co">
+          </div>
+          <div class="concierge-overlay">
+            <h4 class="concierge-title"><span class="brand-orange">VENUE &</span> TRANSPORTATION.</h4>
+            <p class="concierge-desc">Curated locations paired with smooth, reliable ground transport coordination.</p>
+          </div>
+        </div>
+
+        <!-- 03: Guest Experience -->
+        <div class="concierge-card card-mid">
+          <div class="concierge-img-wrap">
+            <img src="assets/concierge-guest.jpg" alt="Guest Experience — Craig & Co">
+          </div>
+          <div class="concierge-overlay">
+            <h4 class="concierge-title"><span class="brand-orange">GUEST</span> EXPERIENCE.</h4>
+            <p class="concierge-desc">Dedicated, high-touch care that elevates every moment in between.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 06 — CO PRODUCTION -->
+  <section class="co-production" id="production">
+    <div class="wrap">
+      <div class="production-header">
+        <div class="production-icon-wrap">
+          <img src="assets/Logo-06.png" alt="CO PRODUCTION." class="production-icon">
+        </div>
+        <div class="production-brand"><span class="brand-orange">CO</span> PRODUCTION</div>
+        <p class="production-subheading">
+          Delivering immersive spatial experiences alongside memorable,
+          <span class="brand-orange">custom-crafted takeaways.</span>
+        </p>
+      </div>
+
+      <div class="production-grid">
+        <!-- 01: Technical & Event Production -->
+        <div class="production-card card-tall">
+          <div class="production-img-wrap">
+            <img src="assets/retreat.jpg" alt="Technical & Event Production — Craig & Co">
+          </div>
+          <div class="production-overlay">
+            <h4 class="production-title"><span class="brand-orange">TECHNICAL &</span> EVENT PRODUCTION</h4>
+            <p class="production-desc">High-impact technical execution, custom stage design, AV integration, and broadcast solutions for exhibitions and conferences.</p>
+          </div>
+        </div>
+
+        <!-- 02: Event Marketing & Branding -->
+        <div class="production-card card-offset">
+          <div class="production-img-wrap">
+            <img src="assets/corporate-events.jpg" alt="Event Marketing & Branding — Craig & Co">
+          </div>
+          <div class="production-overlay">
+            <h4 class="production-title"><span class="brand-orange">EVENT MARKETING &</span> BRANDING</h4>
+            <p class="production-desc">On-the-ground brand activation combining CI-compliant booth design, custom mascot creation, and marketing strategies engineered to capture market attention and drive attendee engagement.</p>
+          </div>
+        </div>
+
+        <!-- 03: Event Keepsakes & VIP Gifts -->
+        <div class="production-card card-mid">
+          <div class="production-img-wrap">
+            <img src="assets/leisure-destination.jpg" alt="Event Keepsakes & VIP Gifts — Craig & Co">
+          </div>
+          <div class="production-overlay">
+            <h4 class="production-title"><span class="brand-orange">EVENT KEEPSAKES &</span> VIP GIFTS</h4>
+            <p class="production-desc">Branded merchandise, bespoke gift packaging, and curated takeaways that leave a lasting brand impression.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section class="cta-strip">
     <div class="wrap">
       <h2>Ready to create something <span class="hi">memorable?</span></h2>
@@ -338,11 +440,11 @@
       },
     });
 
-    // Touch/click toggle support for CO LEISURE cards
-    document.querySelectorAll('.leisure-card').forEach(card => {
+    // Touch/click toggle support for CO LEISURE, CO CONCIERGE & CO PRODUCTION cards
+    document.querySelectorAll('.leisure-card, .concierge-card, .production-card').forEach(card => {
       card.addEventListener('click', (e) => {
         const isActive = card.classList.contains('is-active');
-        document.querySelectorAll('.leisure-card').forEach(c => c.classList.remove('is-active'));
+        document.querySelectorAll('.leisure-card, .concierge-card, .production-card').forEach(c => c.classList.remove('is-active'));
         if (!isActive) {
           card.classList.add('is-active');
         }
