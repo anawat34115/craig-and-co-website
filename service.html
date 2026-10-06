@@ -26,12 +26,58 @@
     </div>
   </nav>
 
-  <header class="contact-hero">
+  <header class="service-hero">
     <div class="wrap">
       <div class="eyebrow" style="text-align:center; justify-content:center;">CO SERVICE</div>
-      <h1>Three ways to make the next moment meaningful.</h1>
+      <h1 class="service-hero-title">
+        One considered partner from<br>
+        <span class="highlight-orange">the first idea to the final detail.</span>
+      </h1>
+      <p class="service-hero-desc">
+        From event design and management to venue sourcing, transportation, travel arrangements, and on-site photography and videography — we handle every detail of your experience, start to finish.
+      </p>
     </div>
   </header>
+
+  <!-- 3 CORE SERVICES OVERVIEW -->
+  <section class="three-ways-section">
+    <div class="wrap">
+      <div class="three-ways-grid">
+        <div class="three-ways-content">
+          <h2 class="three-ways-title">
+            <span class="highlight-orange">Three ways</span><br>
+            to make the next<br>
+            moment<br>
+            meaningful.
+          </h2>
+          <div class="three-ways-divider"></div>
+          <p class="three-ways-text">
+            From event design and management to venue sourcing, transportation, travel arrangements, and on-site photography and videography, we handle every detail of your experience, start to finish.
+          </p>
+        </div>
+        <div class="three-ways-cards">
+          <a href="#service-event" class="three-ways-card">
+            <img src="assets/corporate-events.jpg" alt="CO EVENT." class="three-ways-img">
+            <div class="three-ways-badge">
+              <span class="badge-orange">CO</span> EVENT.
+            </div>
+          </a>
+          <a href="#leisure" class="three-ways-card">
+            <img src="assets/leisure-teambuilding.jpg" alt="CO LEISURE." class="three-ways-img">
+            <div class="three-ways-badge">
+              <span class="badge-orange">CO</span> LEISURE.
+            </div>
+          </a>
+          <a href="#concierge" class="three-ways-card">
+            <img src="assets/concierge-guest.jpg" alt="CO CONCIERGE." class="three-ways-img">
+            <div class="three-ways-badge">
+              <span class="badge-orange">CO</span> CONCIERGE.
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <section id="services">
     <div class="wrap">
@@ -42,7 +88,7 @@
         </div>
       </div>
       <div class="services-grid">
-        <div class="service-card">
+        <div class="service-card" id="service-event">
           <div class="service-media" style="background-image:url('assets/corporate-events.jpg')"></div>
           <span class="card-arrow">↗</span>
           <div class="service-tag">SHAPE THE ROOM</div>
@@ -57,7 +103,7 @@
           </ul>
           <div class="service-outcome"><b>Outcome</b>A clear message people can feel and remember.</div>
         </div>
-        <div class="service-card">
+        <div class="service-card" id="service-leisure">
           <div class="service-media" style="background-image:url('assets/retreat.jpg')"></div>
           <span class="card-arrow">↗</span>
           <div class="service-tag">CHANGE THE PACE</div>
@@ -71,7 +117,7 @@
           </ul>
           <div class="service-outcome"><b>Outcome</b>Stronger connection, renewed energy, shared direction.</div>
         </div>
-        <div class="service-card wide">
+        <div class="service-card wide" id="service-concierge">
           <div style="display:flex; flex-direction:column; justify-content:center; padding-right:24px;">
             <span class="card-arrow">↗</span>
             <div class="service-tag">CARE FOR EVERY DETAIL</div>
@@ -154,28 +200,6 @@
         <div class="swiper-pagination"></div>
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
-      </div>
-    </div>
-  </section>
-
-  <section class="execution">
-    <div class="wrap">
-      <img src="assets/execution.jpg" alt="Guests connecting at a Craig & Co event">
-      <div>
-        <div class="eyebrow">END-TO-END, NEVER OFF-THE-SHELF</div>
-        <h2>Flawless execution that lets human connection take center stage.</h2>
-        <div class="exec-list">
-          <div class="exec-item"><span class="no">01</span> Spatial & Experience Design <span class="arrow">↗</span>
-          </div>
-          <div class="exec-item"><span class="no">02</span> End-to-End Event Production <span class="arrow">↗</span>
-          </div>
-          <div class="exec-item"><span class="no">03</span> Curated Venue & Destination Sourcing <span
-              class="arrow">↗</span></div>
-          <div class="exec-item"><span class="no">04</span> Travel & Ground Logistics <span class="arrow">↗</span></div>
-          <div class="exec-item"><span class="no">05</span> Media & Content Capture <span class="arrow">↗</span></div>
-          <div class="exec-item"><span class="no">06</span> Hospitality & Concierge Service <span class="arrow">↗</span>
-          </div>
-        </div>
       </div>
     </div>
   </section>
@@ -363,6 +387,29 @@
           <div class="production-overlay">
             <h4 class="production-title"><span class="brand-orange">EVENT KEEPSAKES &</span> VIP GIFTS</h4>
             <p class="production-desc">Branded merchandise, bespoke gift packaging, and curated takeaways that leave a lasting brand impression.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- END-TO-END, NEVER OFF-THE-SHELF -->
+  <section class="execution">
+    <div class="wrap">
+      <img src="assets/execution.jpg" alt="Guests connecting at a Craig & Co event">
+      <div>
+        <div class="eyebrow">END-TO-END, NEVER OFF-THE-SHELF</div>
+        <h2>Flawless execution that lets human connection take center stage.</h2>
+        <div class="exec-list">
+          <div class="exec-item"><span class="no">01</span> Spatial & Experience Design <span class="arrow">↗</span>
+          </div>
+          <div class="exec-item"><span class="no">02</span> End-to-End Event Production <span class="arrow">↗</span>
+          </div>
+          <div class="exec-item"><span class="no">03</span> Curated Venue & Destination Sourcing <span
+              class="arrow">↗</span></div>
+          <div class="exec-item"><span class="no">04</span> Travel & Ground Logistics <span class="arrow">↗</span></div>
+          <div class="exec-item"><span class="no">05</span> Media & Content Capture <span class="arrow">↗</span></div>
+          <div class="exec-item"><span class="no">06</span> Hospitality & Concierge Service <span class="arrow">↗</span>
           </div>
         </div>
       </div>
