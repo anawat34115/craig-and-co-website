@@ -28,7 +28,6 @@
 
   <header class="contact-hero">
     <div class="wrap">
-      <div class="eyebrow" style="text-align:center; justify-content:center;">CO PORTFOLIO</div>
       <h1>See the feeling in the details.</h1>
     </div>
   </header>
@@ -106,22 +105,32 @@
       <h2 style="margin-bottom:14px;">Connect. Experience. Create.</h2>
       <p style="max-width:520px; margin:0 auto 44px; opacity:0.72; font-size:15px;">We collaborate with trusted venues,
         travel specialists, production teams, and hospitality partners to make every experience seamless.</p>
-      <div class="gallery-grid" style="grid-template-columns:repeat(4,1fr);">
-        <img src="assets/gallery-yacht.jpg" alt="Partner venue"><img src="assets/gallery-couple.jpg"
-          alt="Partner hospitality"><img src="assets/gallery-yacht.jpg" alt="Partner venue"><img
-          src="assets/gallery-couple.jpg" alt="Partner hospitality">
+    </div>
+
+    <!-- Logo marquee: แก้โลโก้แค่ใน .logo-marquee-group ชุดเดียวต่อแถว (สคริปต์ด้านล่างจะคัดลอกให้วิ่งวนเอง)
+         แทนที่ <span class="partner-logo">…</span> ด้วย <img class="partner-logo" src="assets/partners/xxx.png" alt="ชื่อพาร์ทเนอร์"> -->
+    <div class="logo-marquee" aria-label="Our partners">
+      <div class="logo-marquee-track">
+        <div class="logo-marquee-group">
+          <span class="partner-logo">Partner 01</span>
+          <span class="partner-logo">Partner 02</span>
+          <span class="partner-logo">Partner 03</span>
+          <span class="partner-logo">Partner 04</span>
+          <span class="partner-logo">Partner 05</span>
+          <span class="partner-logo">Partner 06</span>
+        </div>
       </div>
     </div>
-  </section>
-
-  <section class="cta-strip">
-    <div class="wrap">
-      <h2>Ready to create something <span class="hi">memorable?</span></h2>
-      <p>Tell us about your event or retreat. Our team will respond within 24 hours with a tailored proposal — free of
-        charge, no commitment required.</p>
-      <div class="cta-box">
-        <a class="btn-primary" href="contact.html">GET A FREE PROPOSAL</a>
-        <a class="btn-secondary" href="tel:+66956166995">📞 CALL US NOW</a>
+    <div class="logo-marquee logo-marquee--reverse" aria-label="Our partners">
+      <div class="logo-marquee-track">
+        <div class="logo-marquee-group">
+          <span class="partner-logo">Partner 07</span>
+          <span class="partner-logo">Partner 08</span>
+          <span class="partner-logo">Partner 09</span>
+          <span class="partner-logo">Partner 10</span>
+          <span class="partner-logo">Partner 11</span>
+          <span class="partner-logo">Partner 12</span>
+        </div>
       </div>
     </div>
   </section>
@@ -167,6 +176,20 @@
         el: '.testimonialSwiper .swiper-pagination',
         clickable: true,
       },
+    });
+
+    // Logo marquee: clone the group so each half of the track is wider than the screen → seamless loop
+    document.querySelectorAll('.logo-marquee-track').forEach(function (track) {
+      var group = track.querySelector('.logo-marquee-group');
+      var copies = Math.max(1, Math.ceil(window.innerWidth * 1.5 / group.offsetWidth));
+      var html = '';
+      for (var i = 1; i < copies; i++) html += group.outerHTML;
+      if (html) group.insertAdjacentHTML('afterend', html);
+      var half = track.innerHTML;
+      track.insertAdjacentHTML('beforeend', half);
+      track.querySelectorAll('.logo-marquee-group').forEach(function (g, i) {
+        if (i > 0) g.setAttribute('aria-hidden', 'true');
+      });
     });
   </script>
 </body>

@@ -119,98 +119,6 @@
   </div>
 </section>
 
-<!-- 03 — WHAT WE DO (FEATURED SERVICES PREVIEW) -->
-<section id="services-preview" style="background:#eee9db;">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <h2>Curated services designed for lasting impact.</h2>
-      </div>
-      <a class="link-arrow" href="service.html">EXPLORE ALL SERVICES ↗</a>
-    </div>
-    <div class="services-grid" style="grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));">
-      <div class="service-card">
-        <div class="service-media" style="background-image:url('assets/corporate-events.jpg')"></div>
-        <div class="service-tag">CORPORATE & ACTIVATIONS</div>
-        <h3>Craig · Event</h3>
-        <p>Conferences, product launches, and brand activations designed with precision and creative flair.</p>
-        <a class="link-arrow" href="service.html">Explore Events ↗</a>
-      </div>
-      <div class="service-card">
-        <div class="service-media" style="background-image:url('assets/retreat.jpg')"></div>
-        <div class="service-tag">RETREATS & JOURNEYS</div>
-        <h3>Craig · Journey</h3>
-        <p>Leadership retreats and team-building journeys that foster alignment, trust, and renewed focus.</p>
-        <a class="link-arrow" href="service.html">Explore Journeys ↗</a>
-      </div>
-      <div class="service-card">
-        <div class="service-media" style="background-image:url('assets/execution.jpg')"></div>
-        <div class="service-tag">CONCIERGE & HOSPITALITY</div>
-        <h3>Craig · Concierge</h3>
-        <p>End-to-end luxury travel, VIP transport, venue sourcing, and high-touch hospitality management.</p>
-        <a class="link-arrow" href="service.html">Explore Concierge ↗</a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 04 — SELECTED MOMENTS (VISUAL GALLERY PREVIEW) -->
-<section id="gallery-preview">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <h2>See the feeling in the details.</h2>
-      </div>
-      <a class="link-arrow" href="portfolio.html">VIEW FULL PORTFOLIO ↗</a>
-    </div>
-    <div class="gallery-grid">
-      <img class="tall" src="assets/gallery-couple.jpg" alt="Guests connecting at an event">
-      <img src="assets/gallery-yacht.jpg" alt="Yacht experience">
-      <img src="assets/execution.jpg" alt="Guests at an activation">
-      <img src="assets/brand-activation.jpg" alt="Brand activation">
-      <img src="assets/corporate-events.jpg" alt="Team building activity">
-      <img src="assets/retreat.jpg" alt="Executive retreat">
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section style="background:#eee9db;">
-  <div class="wrap">
-    <div class="section-head">
-      <div>
-        <div class="section-num">FAQ</div>
-        <h2>Good to know.</h2>
-      </div>
-    </div>
-    <div class="faq-list">
-      <div class="faq-item-wrap">
-        <div class="faq-item"><h4>What kind of experiences do you create?</h4><span class="plus">+</span></div>
-        <div class="faq-answer">Corporate events, conferences and brand activations; leadership retreats and team-building journeys; and full concierge support — venue sourcing, transportation, travel management and on-site photography/videography.</div>
-      </div>
-      <div class="faq-item-wrap">
-        <div class="faq-item"><h4>Where does CRAIG&CO operate?</h4><span class="plus">+</span></div>
-        <div class="faq-answer">We're based in Bangkok, Thailand, and deliver experiences across Thailand and beyond.</div>
-      </div>
-      <div class="faq-item-wrap">
-        <div class="faq-item"><h4>How early should we get in touch?</h4><span class="plus">+</span></div>
-        <div class="faq-answer">Reach out as soon as you have a date or idea in mind — our team responds within 24 hours with a tailored proposal, free of charge.</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="cta-strip">
-  <div class="wrap">
-    <h2>Ready to create something <span class="hi">memorable?</span></h2>
-    <p>Tell us about your event or retreat. Our team will respond within 24 hours with a tailored proposal — free of charge, no commitment required.</p>
-    <div class="cta-box">
-      <a class="btn-primary" href="contact.html">GET A FREE PROPOSAL</a>
-      <a class="btn-secondary" href="tel:+66956166995">📞 CALL US NOW</a>
-    </div>
-  </div>
-</section>
-
 <footer>
   <div class="wrap">
     <div class="footer-grid">
@@ -239,16 +147,5 @@
   </div>
 </footer>
 
-<script>
-document.querySelectorAll('.faq-item').forEach(item=>{
-  item.addEventListener('click',()=>{
-    const plus = item.querySelector('.plus');
-    const answer = item.parentElement.querySelector('.faq-answer');
-    const isOpen = plus.textContent === '–';
-    plus.textContent = isOpen ? '+' : '–';
-    answer.style.display = isOpen ? 'none' : 'block';
-  });
-});
-</script>
 </body>
 </html>
